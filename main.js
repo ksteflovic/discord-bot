@@ -1,8 +1,12 @@
 const Discord = require('discord.js')
-
-const client = new Discord.Client();
-const prefix = '!'; // this prefix will be used to call commands
 const fs = require('fs');
+const client = new Discord.Client();
+
+const {
+	prefix,
+	token,
+} = require('./config.json');
+
 
 client.command = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js')); // ensure that the command file ends with .js
@@ -17,6 +21,14 @@ client.once('ready', () => {
     console.log('Carrot is online!')
 })
 
+client.once('reconnecting', () => {
+	console.log('Reconnecting!');
+});
+
+client.once('disconnect', () => {
+	console.log('Disconnect!');
+});
+
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot)
         return;
@@ -30,4 +42,4 @@ client.on('message', message => {
 })
 
 
-client.login('NzUyOTAyMTcxMzQyNjY3ODE3.X1eYyQ.yeWtMu_RqpC8gAwfkk66BYZ12kg');
+client.login(token);
