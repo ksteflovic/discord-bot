@@ -1,6 +1,6 @@
-<img align="left" width=80px height=80px src="https://i.ibb.co/27n40Xx/bot-avatar.png" alt="Project logo" style="border-radius: 50%;">
+<img style="border-radius: 50%;" align="left" width=80px height=80px src="https://i.ibb.co/27n40Xx/bot-avatar.png" alt="Project logo" >
 
-## Discord BOT
+# Discord BOT
 ### Carrot 🥕
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/pajka-js/discord-bot) [![Discord](https://img.shields.io/discord/665924269426868247.svg?label=Pajka's%20Discord&logo=discord&logoColor=ffffff&color=7389D8&labelColor=237289DA)](https://discord.gg/eSUGj3p) ![GitHub followers](https://img.shields.io/github/followers/pajka-js?style=social)
