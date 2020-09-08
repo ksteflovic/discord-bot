@@ -9,6 +9,7 @@
   "author": "PajkaJS",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.3.1"
+    "discord.js": "^12.3.1",
+    "ytdl-core": "^3.2.2"
   }
 }

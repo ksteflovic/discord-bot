@@ -1,14 +1,15 @@
 const Discord = require('discord.js')
 const fs = require('fs');
-const client = new Discord.Client();
+const Client = require('./client/Client');
 
 const {
 	prefix,
 	token,
 } = require('./config.json');
 
-
+const client = new Client();
 client.command = new Discord.Collection();
+
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js')); // ensure that the command file ends with .js
 
 // we are gonna loop the files to make sure it is the correct file
@@ -40,6 +41,5 @@ client.on('message', message => {
         client.commands.get('ping').execute(message, args);
     }
 })
-
 
 client.login(token);
