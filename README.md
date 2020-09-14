@@ -9,7 +9,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-A chat bot for Discord app based off discord.js.
+A chat bot for Discord app based off ```discord.js```.
 
 ## 📝 List of commands
 
