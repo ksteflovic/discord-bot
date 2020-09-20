@@ -22,7 +22,7 @@ for(const file of commandFiles){
     client.command.set(command.name, command);
 }
 
-client.on('ready', () => {
+client.once('ready', () => {
     console.log('Carrot is online!');
 
     // counting...
