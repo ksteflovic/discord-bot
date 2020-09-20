@@ -1,15 +1,14 @@
 const Discord = require('discord.js')
 const fs = require('fs');
 const client = new Discord.Client();
-//const client = require('./client/Client');
+// const Client = require('./client/Client');
 
 // Ctrl+Shift+P
 
 const {
 	prefix
 } = require('./config.json');
-const token = 'NzUyOTAyMTcxMzQyNjY3ODE3.X1eYyQ.rrNRwBDeNopvBARAwNKxJ6yIvMc';
-//process.env.token;
+const token = process.env.token;
 
 client.command = new Discord.Collection();
 
@@ -18,7 +17,7 @@ const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith(
 // we are gonna loop the files to make sure it is the correct file
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
-    client.command.set(command.name, command);
+    client.commands.set(command.name, command);
 }
 
 client.on('ready', () => {
