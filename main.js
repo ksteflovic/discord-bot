@@ -10,8 +10,7 @@ const {
 } = require('./config.json');
 const token = process.env.token;
 
-const client = new Client();
-client.command = new Discord.Collection();
+Client.command = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js')); // ensure that the command file ends with .js
 
