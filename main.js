@@ -40,6 +40,9 @@ client.on('message', message => {
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
     }
+    if(command === 'play'){
+        client.commands.get('play').execute(message, args);
+    }
 })
 
 client.login(token);
