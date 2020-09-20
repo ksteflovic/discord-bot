@@ -45,10 +45,10 @@ client.on('message', message => {
     const command = args.shift().toLowerCase();
     
     if(command === 'ping'){
-        client.commands.get('ping').execute(message, args);
+        client.command.get('ping').execute(message, args);
     }
     if(command === 'play'){
-        client.commands.get('play').execute(message, args);
+        client.command.get('play').execute(message, args);
     }
 })
 
