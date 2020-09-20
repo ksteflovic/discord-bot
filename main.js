@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const fs = require('fs');
-const Client = new Discord.Client();
-const client = require('./client/Client');
+const client = new Discord.Client();
+// const client = require('./client/Client');
 
 // Ctrl+Shift+P
 
