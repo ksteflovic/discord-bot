@@ -55,7 +55,7 @@ client.on('message', message => {
 client.login(token);
 
 function count(){
-    let myGuild = Client.guilds.cache.get('665924269426868247'); // subclass of JS map, ID of my Server
+    let myGuild = client.guilds.cache.get('665924269426868247'); // subclass of JS map, ID of my Server
     let memberCount = myGuild.memberCount;
     console.log(memberCount);
     let memberCountChannel = myGuild.channels.cache.get('757344958771494935');
