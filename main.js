@@ -2,6 +2,8 @@ const Discord = require('discord.js')
 const fs = require('fs');
 const Client = require('./client/Client');
 
+// Ctrl+Shift+P
+
 const {
 	prefix,
 	token,
