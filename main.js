@@ -8,6 +8,7 @@ const Client = new Discord.Client();
 const {
 	prefix
 } = require('./config.json');
+const token = process.env.token;
 
 const client = new Client();
 client.command = new Discord.Collection();
@@ -56,4 +57,4 @@ client.on('message', message => {
     }
 })
 
-client.login(process.env.token);
+client.login(token);
