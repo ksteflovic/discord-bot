@@ -1,12 +1,12 @@
 const Discord = require('discord.js')
 const fs = require('fs');
-const Client = require('./client/Client');
+const Client = new Discord.Client();
+// const Client = require('./client/Client');
 
 // Ctrl+Shift+P
 
 const {
-	prefix,
-	token,
+	prefix
 } = require('./config.json');
 
 const client = new Client();
@@ -20,8 +20,17 @@ for(const file of commandFiles){
     client.commands.set(command.name, command);
 }
 
-client.once('ready', () => {
-    console.log('Carrot is online!')
+client.on('ready', () => {
+    console.log('Carrot is online!');
+
+    // counting...
+    let myGuild = Client.guilds.cache.get('665924269426868247'); // subclass of JS map, ID of my Server
+    let memberCount = myGuild.memberCount;
+    console.log(memberCount);
+    let memberCountChannel = myGuild.channels.cache.get('757344958771494935');
+    memberCountChannel.setName('Members: ' + memberCount)
+        .then(result => console.log(result))
+        .catch(error => console.log(error));   
 })
 
 client.once('reconnecting', () => {
@@ -47,4 +56,4 @@ client.on('message', message => {
     }
 })
 
-client.login(token);
+client.login(process.env.token);
