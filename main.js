@@ -24,10 +24,13 @@ for(const file of commandFiles){
 
 client.once('ready', () => {
     console.log('Carrot is online!');
+});
 
+client.on('ready', () => {
     // counting...
-    count();
-})
+    count();    
+});
+
 
 client.once('reconnecting', () => {
 	console.log('Reconnecting!');
